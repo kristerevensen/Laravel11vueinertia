@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
@@ -10,7 +11,7 @@ Route::get('/', [FrontendController::class, 'index'])->name('home');
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
 Route::inertia('/contact', 'Frontend/Contact', ['title' => "Contact page"])->name('contact');
 
-
+Route::resource('/campaigns', CampaignController::class)->name('index', 'campaigns.index');
 
 
 Route::get('/dashboard', function () {

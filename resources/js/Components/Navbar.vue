@@ -9,6 +9,9 @@
                     <Link class="text-dark" :href="route('home')">Home </Link>
                 </li>
                 <li class="nav-item">
+                    <Link class="text-dark" :href="route('campaigns.index')">Campaigns </Link>
+                </li>
+                <li class="nav-item">
                     <Link class="text-dark" :href="route('about')">About </Link>
                 </li>
                 <li class="nav-item">
